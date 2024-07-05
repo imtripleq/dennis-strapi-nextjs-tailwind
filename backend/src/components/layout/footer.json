@@ -11,7 +11,7 @@
       "repeatable": false,
       "component": "layout.logo"
     },
-    "menuLinks": {
+    "screenIndustry": {
       "type": "component",
       "repeatable": true,
       "component": "links.link"
@@ -26,10 +26,20 @@
       "repeatable": true,
       "component": "links.social-link"
     },
-    "categories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category"
+    "aboutUs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
+    },
+    "helpCentre": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
+    },
+    "accessContent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
     }
   }
 }

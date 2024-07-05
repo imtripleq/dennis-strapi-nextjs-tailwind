@@ -136,14 +136,12 @@ export interface LayoutFooter extends Schema.Component {
   };
   attributes: {
     footerLogo: Attribute.Component<'layout.logo'>;
-    menuLinks: Attribute.Component<'links.link', true>;
+    screenIndustry: Attribute.Component<'links.link', true>;
     legalLinks: Attribute.Component<'links.link', true>;
     socialLinks: Attribute.Component<'links.social-link', true>;
-    categories: Attribute.Relation<
-      'layout.footer',
-      'oneToMany',
-      'api::category.category'
-    >;
+    aboutUs: Attribute.Component<'links.link', true>;
+    helpCentre: Attribute.Component<'links.link', true>;
+    accessContent: Attribute.Component<'links.link', true>;
   };
 }
 
@@ -229,7 +227,9 @@ export interface LinksSocialLink extends Schema.Component {
     url: Attribute.String & Attribute.Required;
     newTab: Attribute.Boolean & Attribute.DefaultTo<false>;
     text: Attribute.String & Attribute.Required;
-    social: Attribute.Enumeration<['YOUTUBE', 'TWITTER', 'DISCORD', 'WEBSITE']>;
+    social: Attribute.Enumeration<
+      ['YOUTUBE', 'TWITTER', 'WEBSITE', 'LINKEDIN', 'FACEBOOK']
+    >;
   };
 }
 

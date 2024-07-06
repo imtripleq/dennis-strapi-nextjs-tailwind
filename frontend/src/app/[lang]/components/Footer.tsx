@@ -13,13 +13,13 @@ interface FooterLink {
   social?: string;
 }
 
-interface CategoryLink {
-  id: string;
-  attributes: {
-    name: string;
-    slug: string;
-  };
-}
+// interface CategoryLink {
+//   id: string;
+//   attributes: {
+//     name: string;
+//     slug: string;
+//   };
+// }
 
 function FooterLink({ url, text }: FooterLink) {
   const path = usePathname();

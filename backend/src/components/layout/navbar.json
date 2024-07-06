@@ -13,15 +13,40 @@
       "repeatable": true,
       "component": "links.link"
     },
-    "button": {
-      "type": "component",
-      "repeatable": false,
-      "component": "links.button-link"
-    },
     "navbarLogo": {
       "type": "component",
       "repeatable": false,
       "component": "layout.logo"
+    },
+    "screenIndustryServices": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
+    },
+    "accessContent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
+    },
+    "culturalFund": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
+    },
+    "news": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
+    },
+    "resources": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
+    },
+    "aboutUs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
     }
   }
 }

@@ -167,8 +167,13 @@ export interface LayoutNavbar extends Schema.Component {
   };
   attributes: {
     links: Attribute.Component<'links.link', true>;
-    button: Attribute.Component<'links.button-link'>;
     navbarLogo: Attribute.Component<'layout.logo'>;
+    screenIndustryServices: Attribute.Component<'links.link', true>;
+    accessContent: Attribute.Component<'links.link', true>;
+    culturalFund: Attribute.Component<'links.link', true>;
+    news: Attribute.Component<'links.link', true>;
+    resources: Attribute.Component<'links.link', true>;
+    aboutUs: Attribute.Component<'links.link', true>;
   };
 }
 
@@ -323,6 +328,7 @@ export interface SectionsHero extends Schema.Component {
     description: Attribute.String & Attribute.Required;
     picture: Attribute.Media & Attribute.Required;
     buttons: Attribute.Component<'links.button-link', true>;
+    heroRichText: Attribute.Blocks;
   };
 }
 

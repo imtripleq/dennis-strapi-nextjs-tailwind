@@ -43,7 +43,7 @@ export default function Hero({ data }: HeroProps) {
           <HighlightedText
             text={data.title}
             tag="h1"
-            className="text-5xl font-bold leading-none sm:text-6xl mb-8"
+            className="text-5xl font-bold leading-none sm:text-2xl mb-8"
             color="dark:text-violet-400"
           />
 
@@ -66,13 +66,13 @@ export default function Hero({ data }: HeroProps) {
             ))}
           </div>
         </div>
-        <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+        <div className="flex p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
           <Image
             src={imgUrl || ""}
             alt={
               data.picture.data.attributes.alternativeText || "none provided"
             }
-            className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 "
+            className="h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 "
             width={600}
             height={600}
           />

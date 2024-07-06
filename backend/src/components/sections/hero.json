@@ -13,8 +13,8 @@
       "required": true
     },
     "description": {
-      "type": "string",
-      "required": true
+      "type": "text",
+      "required": false
     },
     "picture": {
       "type": "media",

@@ -78,7 +78,6 @@ export default async function RootLayout({
   if (!global.data) return null;
 
   const { notificationBanner, navbar, footer } = global.data.attributes;
-  console.log("🚀 ~ navbar!!", navbar);
 
   const navbarLogoUrl = getStrapiMedia(
     navbar.navbarLogo.logoImg.data?.attributes.url

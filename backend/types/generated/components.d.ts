@@ -105,11 +105,6 @@ export interface ElementsPlan extends Schema.Component {
     isRecommended: Attribute.Boolean;
     price: Attribute.Decimal;
     pricePeriod: Attribute.String;
-    product_features: Attribute.Relation<
-      'elements.plan',
-      'oneToMany',
-      'api::product-feature.product-feature'
-    >;
   };
 }
 

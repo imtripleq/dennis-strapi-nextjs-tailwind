@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -12,7 +11,12 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.pexels.com',
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'hopeful-action-8efc07760d.media.strapiapp.com',
+        pathname: '/**',
+      },
     ],
   },
 }

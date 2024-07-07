@@ -7,7 +7,7 @@ function colors(type: string) {
     case "warning":
       return "bg-yellow-500";
     case "alert":
-      return "bg-pink-500";
+      return "bg-red-500";
     default:
       return "bg-gray-900";
   }

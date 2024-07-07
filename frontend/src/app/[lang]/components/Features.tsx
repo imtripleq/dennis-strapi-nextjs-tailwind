@@ -1,12 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { renderButtonStyle } from "../utils/render-button-style";
 
+interface Button {
+  id: string;
+  url: string;
+  text: string;
+  type: string;
+  newTab: boolean;
+}
 interface FeaturesProps {
   data: {
     heading: string;
     description: string;
     feature: Feature[];
+    buttons: Button[];
   };
 }
 
@@ -56,9 +65,10 @@ function Feature({
   const fullImageUrl = `${baseUrl}${imageUrl}`;
 
   return (
-    <div className="flip-card w-full h-96">
+    <div className="flip-card w-full h-100">
       <div className="flip-card-inner h-full max-w-sm">
-        <div className="flip-card-front pt-6 flex flex-col items-center border border-primary justify-center text-center bg-white">
+        {/* Front */}
+        <div className="flip-card-front flex flex-col items-center border border-primary justify-center text-center bg-white">
           <h3 className="m-3 text-lg font-semibold text-primary min-h-[3rem] content-center">
             {title}
           </h3>
@@ -88,6 +98,7 @@ function Feature({
             </div>
           )}
         </div>
+        {/* Back */}
         <div className="flip-card-back flex flex-col items-center justify-center text-center bg-gray-300 p-4 rounded-lg">
           <h3 className="m-3 text-lg font-semibold text-white min-h-[3rem]">
             DEMO ONLY
@@ -101,14 +112,27 @@ function Feature({
 
 export default function Features({ data }: FeaturesProps) {
   return (
-    <section className="bg-white py-12 lg:py-24">
-      <div className="container mx-auto max-w-screen-lg py-4 space-y-2 text-black">
+    <section className="bg-gray-100 py-12 lg:py-12">
+      <div className="container mx-auto max-w-screen-xl py-4 space-y-2 text-black">
         <h2 className="text-3xl">{data.heading}</h2>
         <p className="text-black">{data.description}</p>
       </div>
-      <div className="container mx-auto max-w-screen-lg my-6 grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto max-w-screen-xl my-6 grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {data.feature.map((feature: Feature, index: number) => (
           <Feature key={index} {...feature} />
+        ))}
+      </div>
+      <div className="flex justify-end mt-24 mr-12">
+        {data.buttons.map((button: Button, index: number) => (
+          <Link
+            key={index}
+            href={button.url}
+            target={button.newTab ? "_blank" : "_self"}
+            className={renderButtonStyle(button.type)}
+          >
+            {button.text}
+            {" >"}
+          </Link>
         ))}
       </div>
     </section>

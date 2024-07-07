@@ -17,6 +17,11 @@
       "type": "component",
       "repeatable": true,
       "component": "elements.feature"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.button-link"
     }
   }
 }

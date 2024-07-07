@@ -3,6 +3,7 @@ import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import Email from "../components/Email";
+import FeaturesRow from "../components/FeaturesRow";
 
 export function sectionRenderer(section: any, index: number) {
   switch (section.__component) {
@@ -10,6 +11,8 @@ export function sectionRenderer(section: any, index: number) {
       return <Hero key={index} data={section} />;
     case "sections.features":
       return <Features key={index} data={section} />;
+    case "sections.feature-rows-group":
+      return <FeaturesRow key={index} data={section} />;
     case "sections.testimonials-group":
       return <Testimonials key={index} data={section} />;
     case "sections.pricing":

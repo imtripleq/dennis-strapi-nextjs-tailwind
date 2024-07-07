@@ -25,6 +25,12 @@ module.exports = {
         sans: ['Open Sans', 'sans-serif'],
         din: ['DIN Medium', 'sans-serif'],
 	  },
+    spacing: {
+      '100': '28rem',
+      '112': '30rem',
+      '128': '32rem',
+      '136': '40rem',
+    }
     },
   },
   plugins: [],

@@ -280,9 +280,12 @@ export interface SectionsFeatureRowsGroup extends Schema.Component {
     name: 'FeatureRowsGroup';
     displayName: 'Feaures row group';
     icon: 'bars';
+    description: '';
   };
   attributes: {
-    features: Attribute.Component<'elements.feature-row', true>;
+    feature: Attribute.Component<'elements.feature', true>;
+    title: Attribute.String;
+    buttons: Attribute.Component<'links.button-link', true>;
   };
 }
 
@@ -296,6 +299,7 @@ export interface SectionsFeatures extends Schema.Component {
     heading: Attribute.String;
     description: Attribute.Text;
     feature: Attribute.Component<'elements.feature', true>;
+    buttons: Attribute.Component<'links.button-link', true>;
   };
 }
 

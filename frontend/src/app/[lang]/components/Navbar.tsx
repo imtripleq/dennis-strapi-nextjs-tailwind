@@ -185,7 +185,7 @@ export default function Navbar({
             </div>
           </Dialog.Panel>
         </Dialog>
-        <div className="flex justify-center p-4 py-5 rounded-lg shadow-2xl">
+        <div className="flex justify-center rounded-lg shadow-2xl h-20 w-44 relative bg-white">
           <Logo src={logoUrl} />
         </div>
         <button

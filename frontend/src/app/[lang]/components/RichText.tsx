@@ -8,7 +8,6 @@ interface RichTextProps {
 }
 
 export default function RichText({ data }: RichTextProps) {
-  console.log("🚀 ~ RichText ~ data!!", data);
   // TODO: STYLE THE MARKDOWN
   return (
     <section className="rich-text py-6 dark:bg-primary dark:text-white ">
